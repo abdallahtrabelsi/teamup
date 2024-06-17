@@ -1,0 +1,39 @@
+.clip{
+clip-path: polygon(25% 0%, 48% 29%, 48% 80%, 23% 99%);
+background-color: black;
+min-width: auto;
+}
+
+
+
+#buttonstyle {
+
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    /* Makes the font bold */
+    margin: 30px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    background-color: #888888;
+
+    float: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow */
+    transition: all 0.3s ease;
+   
+}
+
+
+#buttonstyle:hover {
+    background-color: #e79c63;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    /* Slightly larger shadow on hover */
+    transform: translateY(-2px);
+    /* Moves the button up slightly on hover */
+}

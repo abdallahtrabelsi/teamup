@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teamup</title>
+    <link rel="stylesheet" href="reference.css">
+    <link rel="stylesheet" href="footer.css">
+
+
+    <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+<script src="services.js"></script>
+<!-- ***********************navbar********************** -->
+<script>
+    document.addEventListener('scroll', function () {
+        const targetSection = document.getElementById('targetSection');
+        if (window.scrollY > 0) {
+            targetSection.classList.add('hidden');
+        } else {
+            targetSection.classList.remove('hidden');
+        }
+    });
+</script>
+<header>
+    <section id="targetSection">
+        <div class="bottom-banner" id="bottomBanner">
+            <div class="div-slide-iso ">
+
+                <img src="images/ISO-Logo-9001.png" alt="">
+
+
+
+                <img src="images/ISO-Logo-14001.png" alt="">
+
+
+
+                <img src="images/ISO-Logo-45001.png" alt="">
+
+            </div>
+            <div class="div-slide">
+
+                <img src="images/algeria_555553.png" alt="">
+                <h2>Branch office</h2>
+
+
+                <img src="images/tunisia_555666.png" alt="">
+                <h2>Headquater</h2>
+
+
+                <img src="images/libya_5111828.png" alt="">
+                <h2>Branch office</h2>
+            </div>
+        </div>
+        <hr class="gradient-line-header">
+    </section>
+            <div class="container">
+                <input type="checkbox" name="check" id="check">
+                <div class="logo-container">
+                    <a href="index.html">
+                       
+                        <img class="logo" src="images/Sans-titre---1.png" alt="" style="width:180px;height: auto">
+                    </a>
+                </div>
+
+                <div class="nav-btn">
+                    <div class="nav-links">
+                        <ul>
+                            <li class="nav-link" style="--i: .6s">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="nav-link" style="--i: .6s">
+                                <a href="Aboutus.html">About Us</a>
+                            </li>
+                            <li class="nav-link" style="--i: .85s">
+                                <a href="Services.html">Services<i class="fas fa-caret-down"></i></a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link">
+                                            <a href="engineering.html">Engineering</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                            <a href="projectmanagement.html">Project management</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                            <a href="consultingservies.html">Consulting Services</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                            <a href="Procurement.html">Procurement</a>
+                                        </li>
+
+                                        <li class="dropdown-link">
+                                            <a href="Construction.html">Construction</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                            <a href="mantenancework.html">Maintenance work</a>
+                                        </li>
+
+                                        <div class="arrow"></div>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-link" style="--i: 1.1s">
+                                <a href="Fields.html">Fields of activity<i class="fas fa-caret-down"></i></a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li class="dropdown-link">
+                                            <a href="Fields.html#S1">Oil & Gas</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                            <a href="Fields.html#S2">Petrochemical & Mining fields</a>
+                                        </li>
+                                    
+                                        <!-- <li class="dropdown-link">
+                                                                                    <a href="Fields.html#S4">Hydropower Plant</a>
+                                                                                </li> -->
+                                        <li class="dropdown-link">
+                                            <a href="Fields.html#S3">Renewable Energy</a>
+                                        </li>
+                                        <li class="dropdown-link">
+                                            <a href="Fields.html#S4">Energy</a>
+                                        </li>
+                                        <div class="arrow"></div>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-link" style="--i: 1.35s">
+                                <a href="References.html">References</a>
+                            </li>
+                            <li class="nav-link" style="--i: 1.35s">
+                                <a href="Contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="hamburger-menu-container">
+                    <div class="hamburger-menu">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ******************************************navbar************************ -->
+
+        <!-- ******************************************slider************************ -->
+
+        <script>
+            onload = start;
+
+            function start() {
+                var i = 1;
+                function Move() {
+                    i = (i % 4) + 1; // 4 is the Number of image in slider
+                    document.getElementById('i' + i).checked = true;
+                }
+                setInterval(Move, 4000); //change img in 3 sec
+            }
+        </script>
+
+
+        <div class="overlay">
+            <div class="container1">
+
+
+                <input type="radio" id="i1" name="images" checked />
+                <!-- <input type="radio" id="i2" name="images" />
+                    <input type="radio" id="i3" name="images" />
+                    <input type="radio" id="i4" name="images" /> -->
+
+                <div class="slide_img" id="one">
+                    <div class="text1-service">REFERENCES</div>
+                    <!-- <img src="images/reference.jpg"> -->
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <script>
+        let currentSlide = 0;
+
+        function changeSlide(direction) {
+            const slides = document.querySelector('.carousel-images');
+            const totalSlides = slides.children.length;
+
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            const offset = -currentSlide * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+
+        function openModal(src) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-img');
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = "none";
+        }
+    </script>
+    
+
+
+        <div class="caroussel-section" >
+
+            <div class="container-reference">
+
+                <div class="carousel">
+                    <div class="carousel-images">
+                        
+                        <!-- <img src="images/wafa1.jpg" alt="Image 1" onclick="openModal(this.src)"> -->
+                        <img src="images/wafa2.jpg" alt="Image 2" onclick="openModal(this.src)">
+                        <img src="images/wafa3.jpg" alt="Image 3" onclick="openModal(this.src)">
+                        <img src="images/wafa4.jpg" alt="Image 3" onclick="openModal(this.src)">
+                        <img src="images/wafa5.jpg" alt="Image 3" onclick="openModal(this.src)">
+                        <img src="images/wafa6.jpg" alt="Image 3" onclick="openModal(this.src)">
+                        <img src="images/wafa7.jpg" alt="Image 3" onclick="openModal(this.src)">
+                    </div>
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+               
+                <div class="text-content">
+                    <h2 class="h2-reference">CONSTRUCTION OF NEW PIPELINE</h2>
+                    <P><strong>Scoop :</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construction of new 50 pipeline 10klm
+                        <br>
+                        <strong class="strong-ref">Client :</strong>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Mellitah oil & gas <br>
+                        <strong class="strong-ref">Location :</strong>&nbsp; EL WAFA oil field Libya <br>
+                        <strong class="strong-ref">Years :</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2021
+                    </P>
+
+                </div>
+            </div>
+            
+        </div>
+    
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+<hr class="gradient-line">
+
+
+    <!-- ******************************section reference2***************** -->
+
+    <script>
+        let currentSlide2 = 0;
+
+        function changeSlide2(direction1) {
+            const slides = document.querySelector('.carousel-images2');
+            const totalSlides = slides.children.length;
+
+            currentSlide2 = (currentSlide2 + direction1 + totalSlides) % totalSlides;
+            const offset = -currentSlide2 * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+    <div class="content-wrapper">
+
+        <div class="caroussel-section" >
+
+            <div class="container-reference">
+
+                <div class="carousel">
+                    <div class="carousel-images2">
+                        <img src="images/haroug1.jpg" alt="Image 1" onclick="openModal(this.src)">
+                        <img src="images/haroug2.jpg" alt="Image 2" onclick="openModal(this.src)">
+                        <!-- <img src="images/section7.jpg" alt="Image 3" onclick="openModal(this.src)"> -->
+                    </div>
+                    <button class="prev" onclick="changeSlide2(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide2(1)">&#10095;</button>
+                </div>
+                <div class="text-content">
+                    <h2 class="h2-reference">MAINTENANCE OF STORAGE TANK</h2>
+                    <P><strong class="strong-ref">Scoop :</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construction of new 50 pipeline 10klm
+                        <br>
+                        <strong class="strong-ref">Client :</strong>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Mellitah oil & gas <br>
+                        <strong class="strong-ref">Location :</strong>&nbsp; EL WAFA oil field Libya <br>
+                        <strong class="strong-ref">Years :</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2021
+                    </P>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <hr class="gradient-line">
+    
+    <!-- ******************************section reference 3***************** -->
+
+    <script>
+        let currentSlide3 = 0;
+
+        function changeSlide3(direction2) {
+            const slides = document.querySelector('.carousel-images3');
+            const totalSlides = slides.children.length;
+
+            currentSlide3 = (currentSlide3 + direction2 + totalSlides) % totalSlides;
+            const offset = -currentSlide3 * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+    <div class="content-wrapper">
+
+        <div class="caroussel-section">
+
+            <div class="container-reference">
+
+                <div class="carousel">
+                    <div class="carousel-images3">
+                        <img src="images/sgs1.jpg" alt="Image 1" onclick="openModal(this.src)">
+                        <img src="images/sgs2.jpg" alt="Image 2" onclick="openModal(this.src)">
+                        <img src="images/sgs3.jpg" alt="Image 3" onclick="openModal(this.src)">
+                    </div>
+                    <button class="prev" onclick="changeSlide3(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide3(1)">&#10095;</button>
+                </div>
+                <div class="text-content">
+                    <h2 class="h2-reference">SGS</h2>
+                    <P><strong>Scoop :</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construction of new 50 pipeline 10klm
+                        <br>
+                        <strong class="strong-ref">Client :</strong>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Mellitah oil & gas <br>
+                        <strong class="strong-ref">Location :</strong>&nbsp; EL WAFA oil field Libya <br>
+                        <strong class="strong-ref">Years :</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2021
+                    </P>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+
+    <!-- ******************footer************* -->
+        <!-- **************************footer******************* -->
+<hr class="gradient-line">
+<footer>
+    <div class="pg-footer">
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-content-column">
+                    <div class="footer-logo">
+                        <a class="footer-logo-link" href="#">
+                            <img src="images/Sans-titre---1.png" alt="Company Logo" style="width:180px;height:auto">
+                        </a>
+                    </div>
+                    <div class="footer-menu">
+                        <ul id="menu-get-started" class="footer-menu-list class1">
+                            <li class="menu-item">
+                                <p><strong>Phone :</strong></p>
+                                <p>(216) 26 342 500</p>
+                            </li>
+                            <li class="menu-item">
+                                <p><strong>What's Up :</strong></p>
+                                <p>(216) 98 372 120</p>
+                            </li>
+                            <li class="menu-item">
+                                <p><strong>Email :</strong></p>
+                                <p>w.jawadi@teamup-epc.com</p>
+                            </li>
+                            <li class="menu-item">
+                                <p><strong>Address :</strong></p>
+                                <p>Farah Lake 4th Floor-Appt. A4/4 - les berges du Lac II - 1053 Tunis-Tunisia</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content-column">
+                    <div class="footer-menu">
+                        <h2 class="footer-menu-name">Company</h2>
+                        <ul id="menu-company" class="footer-menu-list">
+                            <li style="margin-top:10px ;"><a href="index.html">Home</a></li>
+                            <li style="margin-top:10px ;"><a href="Aboutus.html">About Us</a></li>
+                            <li style="margin-top:10px ;"><a href="Contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h2 class="footer-menu-name">Legal</h2>
+                        <ul id="menu-legal" class="footer-menu-list">
+                            <li style="margin-top:10px ;"><a href="#">Privacy Notice</a></li>
+                            <li style="margin-top:10px ;"><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content-column">
+                    <div class="footer-menu">
+                        <h2 class="footer-menu-name">Quick Links</h2>
+                        <ul id="menu-quick-links" class="footer-menu-list">
+                            <li style="margin-top:10px ;"><a href="Services.html">Services</a></li>
+                            <li style="margin-top:10px ;"><a href="Fields.html">Fields of activity</a></li>
+                            <li style="margin-top:10px ;"><a href="References.html">References</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content-column">
+                    <div class="footer-call-to-action">
+                        <h2 class="footer-call-to-action-title">Let's Chat</h2>
+                        <p class="footer-call-to-action-description">Have a support question?</p>
+                        <a id="buttonstyle1" href="Contact.html">Contact Us</a>
+                    </div>
+                    <div class="footer-call-to-action">
+                        <h2 class="footer-call-to-action-title">You Call Us</h2>
+                        <p class="footer-call-to-action-link-wrapper">
+                            <a class="footer-call-to-action-link" href="tel:0124-64XXXX">(216) 70 288 666</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-social-links">
+                    <a class="footer-social-link linkedin" href="#" target="_blank">
+                        <span class="hidden-link-text">Linkedin</span>
+                        <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                            <path class="footer-social-icon-path"
+                                d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="footer-social-link twitter" href="#" target="_blank">
+                        <span class="hidden-link-text">Twitter</span>
+                        <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                            <path class="footer-social-icon-path"
+                                d="M 25.855469 5.574219 C 24.914063 5.992188 23.902344 6.273438 22.839844 6.402344 C 23.921875 5.75 24.757813 4.722656 25.148438 3.496094 C 24.132813 4.097656 23.007813 4.535156 21.8125 4.769531 C 20.855469 3.75 19.492188 3.113281 17.980469 3.113281 C 15.082031 3.113281 12.730469 5.464844 12.730469 8.363281 C 12.730469 8.773438 12.777344 9.175781 12.867188 9.558594 C 8.503906 9.339844 4.636719 7.246094 2.046875 4.070313 C 1.59375 4.847656 1.335938 5.75 1.335938 6.714844 C 1.335938 8.535156 2.261719 10.140625 3.671875 11.082031 C 2.808594 11.054688 2 10.820313 1.277344 10.414063 L 1.277344 10.492188 C 1.277344 13.015625 3.066406 15.070313 5.425781 15.566406 C 4.988281 15.679688 4.527344 15.746094 4.054688 15.746094 C 3.707031 15.746094 3.371094 15.710938 3.046875 15.640625 C 3.71875 17.652344 5.636719 19.136719 7.933594 19.179688 C 6.160156 20.535156 3.945313 21.324219 1.546875 21.324219 C 1.019531 21.324219 0.503906 21.296875 0 21.226563 C 2.324219 22.683594 5.085938 23.519531 8.042969 23.519531 C 17.964844 23.519531 23.28125 15.832031 23.28125 9.027344 L 23.253906 8.410156 C 24.28125 7.699219 25.144531 6.804688 25.855469 5.789063">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="footer-social-link youtube" href="#" target="_blank">
+                        <span class="hidden-link-text">Youtube</span>
+                        <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                            <path class="footer-social-icon-path"
+                                d="M 27.856 7.009 c -0.352 -1.329 -1.392 -2.376 -2.722 -2.729 C 23.28 4 15 4 15 4 s -8.28 0 -10.134 0.28 c -1.329 0.353 -2.37 1.4 -2.722 2.729 C 2 8.864 2 15 2 15 s 0 6.136 0.144 7.991 c 0.352 1.329 1.392 2.375 2.722 2.728 C 6.72 26 15 26 15 26 s 8.28 0 10.134 -0.281 c 1.329 -0.353 2.37 -1.4 2.722 -2.728 C 28 21.136 28 15 28 15 S 28 8.864 27.856 7.009 Z M 12.011 19.569 L 12.011 10.43 L 19.858 15 L 12.011 19.569 Z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a class="footer-social-link github" href="#" target="_blank">
+                        <span class="hidden-link-text">GitHub</span>
+                        <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                            <path class="footer-social-icon-path"
+                                d="M15,3C8.373,3,3,8.373,3,15c0,5.309,3.438,9.799,8.207,11.387c0.6,0.111,0.793-0.261,0.793-0.582c0-0.287-0.012-1.237-0.012-2.244 c-3.338,0.607-4.043-0.813-4.3-1.561c-0.135-0.348-0.722-1.561-1.234-1.875c-0.422-0.227-1.024-0.787-0.012-0.803 c0.951-0.016,1.63,0.875,1.855,1.236c1.084,1.828,2.805,1.307,3.492,0.988c0.111-0.787,0.422-1.307,0.768-1.608 c-2.951-0.318-6.039-1.475-6.039-6.551c0-1.448,0.525-2.635,1.383-3.564C8.281,11.087,7.8,9.775,8.621,7.983 c0,0,1.11-0.348,3.641,1.363c1.051-0.292,2.178-0.439,3.3-0.439s2.249,0.147,3.3,0.439c2.531-1.725,3.641-1.363,3.641-1.363 c0.822,1.792,0.339,3.104,0.168,3.407c0.858,0.929,1.383,2.116,1.383,3.564c0,5.092-3.095,6.233-6.051,6.551 c0.426,0.368,0.804,1.096,0.804,2.212c0,1.608-0.012,2.899-0.012,3.3c0,0.322,0.192,0.707,0.804,0.582C23.565,24.799,27,20.308,27,15 C27,8.373,21.627,3,15,3z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </footer>
+        <div class="footer-copyright">
+            <div class="footer-copyright-wrapper">
+                <p class="footer-copyright-text">
+                    <a class="footer-copyright-link" href="#
+                                            " target="_self"> ©2024. | Created By: Cosmos Network. | All
+                        rights reserved. </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </body>
+    </html>
